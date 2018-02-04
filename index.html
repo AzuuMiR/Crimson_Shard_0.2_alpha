@@ -11,58 +11,93 @@
 
     <body>
         <header>
-<!-- Navbar fixe à onglets dynamiques -->
-        	<div class="container-fluid">
-        		<nav class="navbar navbar-inverse navbar-fixed-top">
+<!-- Navbar à onglets dynamiques -->
+        	
+        		<nav class="navbar navbar-inverse">
         			<div class="container-fluid">
         				<div class="navbar-header">
-        					<button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">
+        					<button class="navbar-toggle" type="button" data-target=".navbar-collapse" data-toggle="collapse">
         						<span class="icon-bar"></span>
-        						<span class="icon-bar"></span>
-        						<span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
         					</button>
         				</div>
         				<div class="collapse navbar-collapse">
-                            <div class="col-md-offset-2">
-            				<ul class="nav nav-tabs" id="nav-list">
+            				<ul class="nav nav-tabs navbar-right" id="nav-list">
                 				<li class="active"><a data-toggle="tab" href="#home">Accueil</a></li>
                 				<li><a data-toggle="tab" href="#exp">Parcours</a></li>
                 				<li><a data-toggle="tab" href="#skills">Compétences</a></li>
-                				<li><a data-toggle="tab" href="#learning">En cours</a></li>
                                 <li><a data-toggle="tab" href="#folio">Portfolio</a></li>
 	            				<li><a data-toggle="tab" href="#projects">Projets</a></li>
             				</ul>
-                            </div>
+                            <ul class="nav nav-tabs" id="nav-list">
+                                <li><a onclick="openNav()">A propos de moi...</a></li>
+                            </ul>
             			</div>
             		</div>
             	</nav>
-            </div>
+            
         </header>
 
         <div class="container-fluid">
             <div class="row">
 <!-- Bandeau droit -->
-                <div class="col-md-2 left-profile">
+                <div id="SidePanel" class="sidenav">
                     <div class="container">
-                        <img src="img/Profile.jpg"/>
-                        <h1>BERARD Quentin</h1>
-                        <p>Né le 1<sup>er</sup> juillet 1997 (19 ans)</p>
-                        <p>🇫🇷 France</p>
-                        <div class="icons">
-                            <ul>
-                                <li><a href="https://github.com/AzuuMiR" target="_blank"><p><i class="fa fa-github" aria-hidden="true"></i></br>AzuuMiR</p></a></li>
-                                <li><a href="https://www.codecademy.com/AzuuMiR" target="_blank"><p><i class="fa fa-code" aria-hidden="true"></i></br>AzuuMiR</p></a></li>
-                                <li><a href="https://www.facebook.com/quentin.azuurarberard" target="_blank"><p><i class="fa fa-facebook-official" aria-hidden="true"></i></br>Quentin Azuu Berard</p></a></li>
-                                <li><a href="https://twitter.com/AzuuRaMiR" target="_blank"><p><i class="fa fa-twitter" aria-hidden="true"></i></br>@AzuuRaMiR</p></a></li>
-                                <li><a href="https://www.youtube.com/user/AzMRChannel" target="_blank"><p><i class="fa fa-youtube-play" aria-hidden="true"></i></br>AzuuRa 'Mi' R Channel</p></a></li>
-                                <li><a href="http://furaizura.deviantart.com/" target="_blank"><p><i class="fa fa-deviantart" aria-hidden="true"></i></br>FuraizuRa</p></a></li>
-                            </ul>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="row">
+                            <div class="col-md-4 profile">
+                                <img src="img/profile.jpg"/>
+                            </div>
+                            <div class="col-md-4 profile">
+                                <h1>BERARD Quentin</h1>
+                                <p>Né le 1<sup>er</sup> juillet 1997 (20 ans)</p>
+                                <p>Saint-Nabord, France 🇫🇷</p>
+                                <h3>Contact</h3>
+                                <p>Téléphone : 07 51 62 58 27</p>
+                                <p>Mail : <a href="mailto:AzuuRa.R@hotmail.fr">AzuuRa.R@hotmail.fr</a></p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icons">
+                                    <h3>Comptes</h3>
+                                    <ul>
+                                        <li><a href="https://github.com/AzuuMiR" target="_blank"><p><i class="fa fa-github" aria-hidden="true"></i> AzuuMiR</p></a></li>
+                                        <li><a href="https://www.codecademy.com/AzuuMiR" target="_blank"><p><i class="fa fa-code" aria-hidden="true"></i> AzuuMiR</p></a></li>
+                                        <li><a href="https://www.facebook.com/quentin.azuurarberard" target="_blank"><p><i class="fa fa-facebook-official" aria-hidden="true"></i> Quentin Azuu Berard</p></a></li>
+                                        <li><a href="https://twitter.com/AzuuRaMiR" target="_blank"><p><i class="fa fa-twitter" aria-hidden="true"></i> @AzuuRaMiR</p></a></li>
+                                        <li><a href="https://www.youtube.com/user/AzMRChannel" target="_blank"><p><i class="fa fa-youtube-play" aria-hidden="true"></i> AzuuRa 'Mi' R Network</p></a></li>
+                                        <li><a href="http://furaizura.deviantart.com/" target="_blank"><p><i class="fa fa-deviantart" aria-hidden="true"></i> FuraizuRa</p></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <p class="copyright-left">Crimson Shard Theme by AzMR</p>           
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>En cours :</h3>
+                                <ul>
+                                    <li><p>Auto-formation Unity 5.3</p></li>
+                                    <li><p>Auto-formation C#</p></li>
+                                    <li><p>Préliminaires de Project Escape (Unity 5.3)</p></li>
+                                    <li><p>Développement du site pour <a href="https://github.com/AzuuMiR/Project_Escape">Project Escape</a></p></li>
+                                    <li><p>Refonte progressive de Crimson Shard/Project MMI</p></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Professions visées :</h3>
+                                <ul>
+                                    <li><p>Employé chez <a href="https://www.arena.net/">ArenaNet</a></p></li>
+                                    <li><p>Développeur web et multimédia</p></li>
+                                    <li><p>Musicien professionnel</p></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <p class="copyright-left">Crimson Shard 0.2 by AzMR</p>
                 </div>
+                </div>
+                                   
 
-                <div class="col-md-10 tab-content">
+                <div class="col-md-offset-1 col-md-10 tab-content">
 <!-- Onglet Accueil -->
                     <div id="home" class="tab-pane fade in active">
                         <div class="container-fluid tab-page homepage">
@@ -70,16 +105,16 @@
                             <h2>Bienvenue sur mon site ! </h2>
                             <p>Réalisé entièrement à la main, son but est de proposer une sorte de curriculum vitae plus complet et agréable à parcourir, ainsi que de servir de démo relativement simple et fonctionnelle en développement web.</p>
                             <ul>
-                                <li><p>> Codé en HTML 5 et CSS 3, couplés à <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> pour la mise en page et le système d'onglets dynamiques, et <a href="http://lokeshdhakar.com/projects/lightbox2/" target="_blank">Lightbox</a> pour le portfolio.</p></li>
+                                <li><p>> Codé en HTML 5 et CSS 3, couplés à <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> pour la mise en page et le système d'onglets dynamiques, et <a href="http://lokeshdhakar.com/projects/lightbox2/" target="_blank">Lightbox</a> pour le portfolio.</p></li>
                                 <li><p>> Les images servant pour les arrières-plans proviennent de <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle Patterns</a>.</p></li>
                                 <li><p>> Les icônes GitHub, Code, Facebook, Twitter, YouTube et DeviantArt proviennent de la bibliothèque <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>.</p></li>
                                 <li><p>> La police OpenSans provient de <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Google Fonts</a>.</p></li>
                                 <li><p>> Les bibliothèques et polices ont été téléchargées afin que le site ne nécessite pas de connexion Internet pour être affiché correctement en local.</p></li>
                                 <li><p>> Conçu pour fonctionner parfaitement avec Firefox et Chrome, tout en étant un maximum responsive et en ayant une navigation fluide sans rechargement de page.</p></li>
-                            </ul></br>
+                            </ul><br>
                             <!-- <h2>Notes :</h2>
                             <ul>
-                                <li><p>> Aucun réglage nécessaire pour le moment.</p></li>
+                                <li><p> Aucun réglage nécessaire pour le moment.</p></li>
                             </ul> -->
                         </div>
                     </div>
@@ -90,15 +125,24 @@
                             <h2>Scolaire :</h2>
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <p>Je suis rentré à l'école à l'âge de 3 ans pour suivre un cursus scolaire classique dans le public, d'abord aux Herbures à Saint-Nabord puis au collège Le Tertre à Remiremont. J'ai obtenu mon brevet des collèges en 2012 avec la mention Assez Bien avant d'accéder au lycée Malraux à Remiremont. J'ai redoublé ma première année de seconde, pour m'orienter par la suite vers la filière STI2D dans laquelle j'ai obtenu mon BAC avec mention Assez Bien. </br>N'ayant pas été sélectionné dans les études supérieures qui m'intéressaient, j'ai intégré la formation Simplon en classe inversée à Epinal.</p>
+                                        <p>J'ai obtenu mon brevet des collèges en 2012 avec la mention Assez Bien avant de redoubler ma première année de seconde, pour m'orienter par la suite vers la filière STI2D dans laquelle j'ai obtenu mon BAC avec mention Assez Bien.<br>N'ayant pas été sélectionné dans les études supérieures qui m'intéressaient, j'ai intégré la formation Simplon en classe inversée à Epinal, puis la filière LLCER Anglais à Nancy en solution de secours.</p>
                                     </div>
                                     <div class="col-md-offset-1 col-md-6">
+                                    	<div class="row">
+                                            <div class="col-md-2">
+                                                <h4>2018</h4>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <p>L1 LLCER Anglais<br>
+                                                Faculté des Langues et Sciences Humaines Nancy</p>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-2">
                                                 <h4>2017</h4>
                                             </div>
                                             <div class="col-md-8">
-                                                <p>Formation Développeur Web</br>
+                                                <p>Formation Développeur Web<br>
                                                 Simplon Epinal</p>
                                             </div>
                                         </div>
@@ -107,9 +151,9 @@
                                                 <h4>2016</h4>
                                             </div>
                                             <div class="col-md-8">
-                                                <p>Bac Sciences et Technologies de l'Industrie et du Développement Durable (STI2D)</br>
-                                                Option Innovation Technologique et Eco-Conception (ITEC)</br>
-                                                - Mention "Assez bien"</p>
+                                                <p>Bac Sciences et Technologies de l'Industrie et du Développement Durable (STI2D)<br>
+                                                Option Innovation Technologique et Eco-Conception (ITEC)<br>
+                                                Mention "Assez bien"</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -117,26 +161,27 @@
                                                 <h4>2012</h4>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Brevet des collèges</br>
+                                                <p>Brevet des collèges<br>
                                                 Mention "Assez bien"</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <hr>
                             <h2>Professionnel :</h2>
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <p>J'ai pu expérimenter le monde du travail une première fois durant mon stage d'observation de 3ème, dans l'entreprise Erreurfatale.com à Saint-Nabord. J'ai été recruté en tant qu'hôte de caisse au centre E.Leclerc de Saint-Etienne-lès-Remiremont durant l'été 2016, où j'ai été rappelé pour des remplacements durant tout le mois d'octobre, puis de nouveau en décembre en renfort pour les week-ends et fêtes de fin d'année.</p>
+                                        <p>J'ai pu expérimenter le monde du travail une première fois durant mon stage d'observation de 3ème, dans l'entreprise Erreurfatale.com à Saint-Nabord.<br>J'ai été recruté en tant qu'hôte de caisse au centre E.Leclerc de Saint-Etienne-lès-Remiremont durant l'été 2016 puis à d'autres périodes où un renfort de personnel était nécessaire.</p>
                                     </div>
                                     <div class="col-md-offset-1 col-md-6">
                                         <div class="row">
                                             <div class="col-md-2">
-                                                <h4>2016</h4>
+                                                <h4>2016-2017</h4>
                                             </div>
                                             <div class="col-md-8">
-                                                <p>Hôte de caisse</br>
-                                                Centre commercial E.Leclerc</br>
-                                                Durée : 3 mois + 10 jours de Décembre</p>
+                                                <p>Hôte de caisse<br>
+                                                Centre commercial E.Leclerc<br>
+                                                Durée : 6 mois</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -144,16 +189,17 @@
                                                 <h4>2011</h4>
                                             </div>
                                             <div class="col-md-8">
-                                                <p>Stage d'observation</br>
+                                                <p>Stage d'observation<br>
                                                 SARL Erreurfatale.com</p>
                                             </div>
                                         </div>
-                                    </div>    
+                                    </div>
                                 </div>
+                            <hr>
                             <h2>Autre :</h2>
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <p>J'ai récemment été recruté en tant que rédacteur et correcteur de news et de guides sur Lebusmagique.fr, site communautaire traitant du jeu vidéo Guild Wars® 2.</p>
+                                        <p>J'ai été recruté en tant que rédacteur et correcteur de news et de guides sur Lebusmagique.fr, site communautaire traitant du jeu vidéo Guild Wars® 2.</p>
                                     </div>
                                     <div class="col-md-offset-1 col-md-6">
                                         <div class="row">
@@ -161,7 +207,7 @@
                                                 <h4>2017</h4>
                                             </div>
                                             <div class="col-md-8">
-                                                <p>Rédacteur/correcteur</br>
+                                                <p>Rédacteur/correcteur<br>
                                                 Site <a href="http://www.lebusmagique.fr/" target="_blank">Lebusmagique.fr</a></p>
                                             </div>
                                         </div>
@@ -236,41 +282,6 @@
                             </div>
                         </div>
                     </div>
-<!-- Onglet En cours -->
-                    <div id="learning" class="tab-pane fade">
-                        <div class="container-fluid tab-page">
-                            <h1>En cours</h1>
-                            <p class="italic">Cette page référence tous les domaines, langages et logiciels que je ne maîtrise pas encore assez pour figurer dans les compétences. Survolez pour faire apparaître les noms.</p>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h2>Développement Web</h2>
-                                    <ul class="images">
-                                        <li><img src="img/learning/PHP.png"/><span class="text-overlay"><span>PHP</span></span></li>
-                                        <li><img src="img/learning/jQuery.png"/><span class="text-overlay"><span>jQuery</span></span></li>
-                                        <li><img src="img/learning/angular.png"/><span class="text-overlay"><span>AngularJS</span></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h2>Audiovisuel - Audio</h2>
-                                    <ul class="images">
-                                        <li><img src="img/learning/cubase.png"/><span class="text-overlay"><span>Cubase Elements 8</span></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h2>Audiovisuel - Montage vidéo</h2>
-                                    <ul class="images">
-                                        <li><img src="img/learning/premiere.png"/><span class="text-overlay"><span>Adobe Premiere Elements 14</span></span></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h2>Jeu Vidéo</h2>
-                                    <ul class="images">
-                                        <li><img src="img/learning/gamemakerstudio.png"/><span class="text-overlay"><span>GameMaker Studio</span></span></li>
-                                    </ul>
-                                </div>                                    
-                            </div>
-                        </div>
-                    </div>
 <!-- Onglet Portfolio -->
                     <div id="folio" class="tab-pane fade">
                         <div class="container-fluid tab-page">
@@ -280,6 +291,7 @@
                                 <li><a data-toggle="tab" href="#digital">Digital</a></li>
                                 <li><a data-toggle="tab" href="#3d">3D</a></li>
                                 <li><a data-toggle="tab" href="#web">Web</a></li>
+                                <li><a data-toggle="tab" href="#fgames">Jeu vidéo</a></li>
                             </ul>
                             <div class="tab-content folio-images">
 
@@ -327,6 +339,13 @@
                                 </ul>
                                 </div>
                             </div>
+                            <div id="fgames" class="tab-pane fade">
+                                <div class="row">
+                                <ul class="images">
+                                    <li><a href="games/Space_Shooter/space_shooter.html" target="_blank" class="thumbnail"><img src="games/Space_Shooter/banner.jpg"/><span class="text-overlay"><span>Tutoriel Unity : Space Shooter</span></span></a></li>
+                                </ul>
+                            	</div>
+                        	</div>
 
                             </div>
                         </div>
@@ -335,21 +354,39 @@
                     <div id="projects" class="tab-pane fade">
                         <div class="container-fluid tab-page">
                             <h1>Projets</h1>
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h2>Musique :</h2>
-                                    <p>Etant passionné de musique, je passe beaucoup de temps à composer et à pratiquer, que ce soit au chant, à la guitare ou à la batterie. J'aimerais démarrer une carrière en produisant un EP gratuit en ligne afin de commencer à me faire connaître, puis si possible former un duo avec un accompagnement vocal féminin.</br>
-                                    Avant de commencer les prises de son, j'aimerais être beaucoup plus à l'aise sur le logiciel Cubase pour réaliser des enregistrements parfaits, ainsi qu'avec Adobe Premiere pour faire la promotion vidéo.</p>
-                                    <h2>Jeu Vidéo :</h2>
-                                    <p>Plongé depuis très longtemps dans le domaine du jeu vidéo, un de mes rêves serait de participer au développement d'un MMORPG, que ce soit en tant que scénariste, compositeur, graphiste ou développeur.</br>
-                                    Rejoindre une équipe telle que celle d'ArenaNet, qui est en charge de Guild Wars® 2, serait pour moi l'option idéale : l'univers que le studio a crée est tellement vaste qu'il reste encore un contenu énorme à exploiter et à soutenir.</p>
-                                    <h2>écriture :</h2>
-                                    <p>Amateur de scénarios d'heroic-fantasy et sciences-fiction profonds et captivants, j'ai deux histoires en cours d'écriture destinées à devenir très longues et recherchées, voire à être adaptées en livres.<ul>
-                                        <li><p>La première se place dans un univers fantastique, à l'aube d'une guerre entre les deux continents de la planète, Nastaria et Sastaria. La technologie de Nastaria est plus évoluée et puise ses ressources directement du noyau planétaire, ce qui présente un danger en cas de surexploitation. Lyra Haarel, une jeune femme, va découvrir un certain moyen de sauver l'humanité des événements n'attendant qu'à se produire.</p></li>
-                                        <li><p>La seconde se déroule dans une époque contemporaine, où certaines personnes sélectionnées ont l'opportunité de vivre à l'intérieur de leur propre vision d'un monde utopique grâce à une machine développée par la société Utopia. Cependant, les simulations peuvent s'effondrer si leur propriétaire décident de suivre un chemin différent de celui qui a crée leur monde.</p></li>
-                                    </ul>
+                            <ul class="nav nav-tabs" id="nav-list">
+                                <li><a data-toggle="tab" href="#music">Musique</a></li>
+                                <li><a data-toggle="tab" href="#pgames">Jeu Vidéo</a></li>
+                                <li><a data-toggle="tab" href="#writing">écriture</a></li>
+                            </ul>
+                            <div class="tab-content">
+
+                            <div id="music" class="tab-pane fade">
+	                            <div class="row">
+	                                <h2>Musique :</h2>
+	                                	<p>Etant passionné de musique, je passe beaucoup de temps à composer et à pratiquer, que ce soit au chant, à la guitare ou à la batterie. J'aimerais démarrer une carrière en produisant un EP gratuit en ligne afin de commencer à me faire connaître, puis si possible former un duo avec un accompagnement vocal féminin.<br>
+	                                	Avant de commencer les prises de son, j'aimerais être beaucoup plus à l'aise sur le logiciel Cubase pour réaliser des enregistrements parfaits, ainsi qu'avec Adobe Premiere pour faire la promotion vidéo.</p>
                                 </div>
                             </div>
+                            <div id="pgames" class="tab-pane fade">
+	                            <div class="row">    
+                                    <h2>Jeu Vidéo :</h2>
+                                    <p>Plongé depuis très longtemps dans le domaine du jeu vidéo, un de mes rêves serait de participer au développement d'un MMORPG, que ce soit en tant que scénariste, compositeur, graphiste ou développeur.<br>
+                                    Rejoindre une équipe telle que celle d'ArenaNet, qui est en charge de Guild Wars® 2, serait pour moi l'option idéale : l'univers que le studio a crée est tellement vaste qu'il reste encore un contenu énorme à exploiter et à soutenir.</p>
+                                </div>
+                            </div>
+                            <div id="writing" class="tab-pane fade">
+	                            <div class="row">        
+                                    <h2>écriture :</h2>
+                                    <p>Amateur de scénarios d'heroic-fantasy et sciences-fiction profonds et captivants, j'écris deux histoires destinées à devenir longues et à poser un univers très riche, voire à être adaptées sous un autre format.
+                                    	<ul>
+	                                        <li><p>La première se place dans un univers fantastique, à l'aube d'une guerre entre les deux continents de la planète, Nastaria et Sastaria. La technologie de Nastaria est plus évoluée et puise ses ressources directement du noyau planétaire, ce qui présente un danger en cas de surexploitation. Lyra Haarel, une jeune femme, va découvrir un certain moyen de sauver l'humanité des événements n'attendant qu'à se produire.</p></li>
+	                                        <li><p>La seconde se déroule dans une époque contemporaine, où certaines personnes sélectionnées ont l'opportunité de vivre à l'intérieur de leur propre vision d'un monde utopique grâce à une machine développée par la société Utopia. Cependant, les simulations peuvent s'effondrer si leur propriétaire décident de suivre un chemin différent de celui qui a crée leur monde.</p></li>
+										</ul>
+									</p>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
 
@@ -357,13 +394,14 @@
             </div>
             <div class="row">
                 <footer>
-                    <p class="copyright">Crimson Shard Theme by AzMR</p>
+                    <p class="copyright">Crimson Shard 0.2 by AzMR</p>
                 </footer>
             </div>
         </div>
 
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/lightbox.js"></script>  
+        <script type="text/javascript" src="js/lightbox.js"></script>
+        <script type="text/javascript" src="js/SidePanel.js"></script>
     </body>
 </html>
